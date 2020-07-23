@@ -65,6 +65,8 @@ sudo touch /etc/containers/nodocker
   vim \
   yq
 
+/home/linuxbrew/.linuxbrew/bin/brew upgrade
+
 # DevOps snippet
 if [[ ! -d "$HOME/.devops-snippets" ]]; then
   git clone git@bitbucket.org:knightindustries/devops-snippets $HOME/.devops-snippets
