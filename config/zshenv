@@ -1,0 +1,109 @@
+#
+# Defines environment variables.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Ensure that a non-login, non-interactive shell has a defined environment.
+if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprofile"
+fi
+# Add local pyhton path
+export PATH=$PATH:$HOME/.local/bin:$HOME/.local/bin/go/bin:$GOPATH/bin:$HOME/.session/scripts:$HOME/.devops-snippets
+export PATH=$PATH:$HOME/.session/scripts/
+export PATH=$PATH:$HOME/go/bin
+
+export EDITOR=vim
+
+source $HOME/.secret-env
+
+# vim
+alias vi='vim'
+
+#fasd
+eval "$(/home/linuxbrew/.linuxbrew/bin/fasd --init auto)"
+alias a='fasd -a'        # any
+alias s='fasd -si'       # show / search / select
+alias d='fasd -d'        # directory
+alias f='fasd -f'        # file
+alias sd='fasd -sid'     # interactive directory selection
+alias sf='fasd -sif'     # interactive file selection
+alias z='fasd_cd -d'     # cd, same functionality as j in autojump
+alias zz='fasd_cd -d -i' # cd with interactive selection
+alias v='f -e vim'       # quick opening files with vim
+
+# git
+alias ggr="git graph"
+alias ggra="git graph --all"
+alias subup="git submodule sync && git submodule update --init --recursive"
+alias gy="git sync"
+
+# watch
+alias wa='watch -n 0.1'
+alias wad='watch -n 1 -d'
+
+alias t='tig'
+#Docker
+alias dk='docker'
+
+#Syncthing
+alias sync-browser='syncthing -browser-only'
+
+# Vault
+export VAULT_ADDR=https://vault.easymile.com
+
+# Kubernetes
+export KOPS_STATE_STORE=s3://easymile-dev-clusters
+
+alias randpass='openssl rand -base64 32 | tr -d /=+ | cut -c -32'
+alias ls='exa'
+alias fini='notify-send "finished" "The task is finished"'
+
+
+alias kbx='kbn $(kb get ns | fzf)'
+
+
+# Slaves aliases
+alias tower="ssh -o StrictHostKeyChecking=no builder@192.168.42.110"
+alias tower5600-1="ssh -o StrictHostKeyChecking=no builder@192.168.42.239"
+alias tower5600-2="ssh -o StrictHostKeyChecking=no builder@192.168.42.189"
+alias tower5600-3="ssh -o StrictHostKeyChecking=no builder@192.168.42.119"
+alias tower7600-1="ssh -o StrictHostKeyChecking=no builder@192.168.42.191"
+alias tower7910-1="ssh -o StrictHostKeyChecking=no builder@192.168.42.81"
+
+alias z600-1="ssh -o StrictHostKeyChecking=no builder@192.168.42.99"
+alias z600-2="ssh -o StrictHostKeyChecking=no builder@192.168.42.76"
+alias z600-3="ssh -o StrictHostKeyChecking=no builder@192.168.42.180"
+
+alias z620-1="ssh -o StrictHostKeyChecking=no builder@192.168.42.234"
+alias z620-2="ssh -o StrictHostKeyChecking=no builder@192.168.42.233"
+alias z620-3="ssh -o StrictHostKeyChecking=no builder@192.168.42.235"
+alias z620-4="ssh -o StrictHostKeyChecking=no builder@192.168.42.23"
+alias z620-5="ssh -o StrictHostKeyChecking=no builder@192.168.42.231"
+alias z620-6="ssh -o StrictHostKeyChecking=no builder@192.168.42.237"
+alias z620-7="ssh -o StrictHostKeyChecking=no builder@192.168.42.171"
+alias z620-8="ssh -o StrictHostKeyChecking=no builder@192.168.42.230"
+alias z620-9="ssh -o StrictHostKeyChecking=no builder@192.168.42.222"
+alias z620-10="ssh -o StrictHostKeyChecking=no builder@192.168.42.241"
+alias z620-11="ssh -o StrictHostKeyChecking=no builder@192.168.42.87"
+
+alias nopush="git remote set-url --push upstream no_push"
+
+# Sound
+alias stereo="pacmd set-card-profile 0 output:analog-stereo+input:analog-stereo"
+alias hdmi="pacmd set-card-profile 0 output:hdmi-surround+input:analog-stereo"
+
+# Brightness
+alias bright='sudo vim /sys/class/backlight/intel_backlight/brightness'
+
+# Openssl
+alias cert='openssl x509 -noout -text -in'
+alias req='openssl req -noout -text -in'
+alias crl='openssl crl -noout -text -in'
+
+#Terraform
+alias tf='terraform'
+
+#bat
+alias cat='bat'
