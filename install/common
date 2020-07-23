@@ -1,0 +1,62 @@
+#!/bin/bash
+set -e
+
+$BREW install \
+  ack \
+  ansible \
+  asdf \
+  awscli \
+  bat \
+  fasd \
+  fzf \
+  go \
+  htop \
+  httpie \
+  jq \
+  make \
+  node \
+  rclone \
+  tmux \
+  vim \
+  yq
+
+$BREW upgrade
+
+# DevOps snippet
+if [[ ! -d "$HOME/.devops-snippets" ]]; then
+  git clone git@bitbucket.org:knightindustries/devops-snippets $HOME/.devops-snippets
+else
+  pushd $HOME/.devops-snippets
+  git pull
+  popd
+fi
+
+# Zprezto
+if [ ! -d "$HOME/.zprezto" ]; then
+	git clone --recursive https://github.com/AlexDouze/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+fi
+if [ ! -d "$HOME/.zprezto-contrib" ]; then
+  git clone --recursive https://github.com/AlexDouze/prezto-contrib.git "${ZDOTDIR:-$HOME}/.zprezto-contrib"
+fi
+
+# Vim Vundle
+if [ ! -d "$HOME/.vim/bundle/vundle" ]; then
+    git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/vundle
+    mkdir -p ~/.vim/colors
+fi
+
+# asdf
+mkdir -p $HOME/.asdf/plugins
+
+echo "Create symlink for zprezto configuration"
+ln -sf $PWD/config/zpreztorc $HOME/.zpreztorc
+ln -sf $PWD/config/zshenv $HOME/.zshenv
+ln -sf $PWD/config/zshrc $HOME/.zshrc
+
+echo "Create symlink for gitconfig"
+ln -sf $PWD/config/gitconfig $HOME/.gitconfig
+
+echo "Create symlink for vim"
+ln -sf $PWD/vim/vimrc $HOME/.vimrc
+ln -sf $PWD/vim/monokai-phoenix.vim $HOME/.vim/colors/monokai-phoenix.vim
+$BREW_HOME/vim +PluginInstall +qall

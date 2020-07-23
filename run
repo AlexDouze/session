@@ -1,0 +1,19 @@
+#!/bin/bash
+set -e
+
+./install/brew
+
+OS=`uname`
+if [[ "$OS" == 'Darwin' ]]; then
+    echo Darwin install
+    export BREW_HOME=/usr/local/bin
+    export BREW=$BREW_HOME/brew
+    ./install/darwin
+elif [[ "$OS" == 'Linux' ]]; then
+    echo Linux install
+    export BREW_HOME=/home/linuxbrew/.linuxbrew/bin
+    export BREW=$BREW_HOME/brew
+    ./install/linux
+fi
+
+./install/common

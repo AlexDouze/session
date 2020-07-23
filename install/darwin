@@ -1,0 +1,16 @@
+#!/bin/bash
+
+$BREW cask install \
+    1password \
+    brave-browser \
+    cryptomator \
+    cyberduck \
+    docker \
+    hyper \
+    protonvpn \
+    rambox \
+    vicosity \
+    visual-studio-code \
+
+echo "Create symlink for gitconfig"
+ln -sf $PWD/config/gitconfig-darwin $HOME/.gitconfig

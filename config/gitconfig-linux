@@ -36,7 +36,7 @@
 [diff]
     tool = vimdiff
 [gpg]
-	program = gpg2
+	program = gpg
 [url "git@gitlab.com:"]
 	insteadOf = https://gitlab.com/
 [url "git@bitbucket.org:"]
