@@ -53,7 +53,7 @@ sudo systemctl restart sshd
 
 # Create symlinks for config files
 echo "Create symlink for tmux configuration"
-ln -sf $PWD/config/tmux.conf $HOME/.tmux.conf
+ln -sf $PWD/config/tmux-linux.conf $HOME/.tmux.conf
 
 echo "Create symlink for i3"
 mkdir -p $HOME/.config/i3

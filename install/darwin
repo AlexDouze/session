@@ -14,3 +14,7 @@ $BREW cask install \
 
 echo "Create symlink for gitconfig"
 ln -sf $PWD/config/gitconfig-darwin $HOME/.gitconfig
+
+echo "Create symlink for tmux configuration"
+ln -sf $PWD/config/tmux-darwin.conf $HOME/.tmux.conf
+
