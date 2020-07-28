@@ -11,6 +11,7 @@ $BREW install \
   bat \
   fasd \
   fzf \
+  gcc \
   go \
   htop \
   httpie \
@@ -21,6 +22,7 @@ $BREW install \
   tmux \
   vim \
   yq
+
 
 # DevOps snippet
 if [[ ! -d "$HOME/.devops-snippets" ]]; then
