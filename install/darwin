@@ -9,7 +9,7 @@ $BREW cask install \
     hyper \
     protonvpn \
     rambox \
-    vicosity \
+    viscosity \
     visual-studio-code \
 
 echo "Create symlink for gitconfig"
