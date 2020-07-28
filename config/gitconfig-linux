@@ -25,7 +25,7 @@
 
 [core]
     pager = less
-    editor = vimx
+    editor = vim
 [push]
     default = simple
 [merge]
