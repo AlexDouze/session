@@ -12,34 +12,11 @@ Plugin 'gmarik/vundle'
 
 " My Plugin here:
 "
-" original repos on github
 Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'Shougo/neocomplete.vim'
-" vim-scripts repos
-Plugin 'sheerun/vim-polyglot'
-Plugin 'robbles/logstash.vim'
-" non github repos
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'rdolgushin/groovy.vim'
 Plugin 'ntpeters/vim-better-whitespace' " Trailing whitespaces visual and deletion
 Plugin 'andrewstuart/vim-kubernetes'    " Kubernetes snippet
-Plugin 'SirVer/ultisnips'               " Snippet Engine
 Plugin 'Yggdroot/indentLine'            " vertical line for indent
-Plugin 'Lokaltog/vim-powerline'         " bottom bar
-Plugin 'tpope/vim-commentary'           " commentary
-Plugin 'chrisbra/Colorizer'             " commentary
-Plugin 'nvie/vim-flake8'
-Plugin 'tpope/vim-pathogen'
-Plugin 'c9s/helper.vim'
-Plugin 'c9s/treemenu.vim'
-Plugin 'c9s/vikube.vim'
-Plugin 'Shougo/neosnippet.vim'
-Plugin 'Shougo/neosnippet-snippets'
-Plugin 'fatih/vim-go'
-Plugin 'majutsushi/tagbar'              " Listing tags
 " ...
 
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
