@@ -20,29 +20,6 @@ Plugin 'Yggdroot/indentLine'            " vertical line for indent
 Plugin 'tpope/vim-commentary'           " commentary
 " ...
 
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
-
-let g:UltiSnipsExpandTrigger="<c-b>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" Neosnippet Conf
-imap   <C-k>      <Plug>(neosnippet_expand_or_jump)
-smap   <C-k>      <Plug>(neosnippet_expand_or_jump)
-xmap   <C-k>      <Plug>(neosnippet_expand_target)
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-filetype plugin indent on " required!
-"
-" Brief help
-" :BundleList - list configured bundles
-" :BundleInstall(!) - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!) - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-
 
 """"""""""""""""""""""""""""""""""""""""""""""
 "              General options
@@ -203,50 +180,3 @@ let g:flake8_show_in_gutter = 1
 let g:flake8_show_quickfix=1
 let g:lake8_show_in_file=1
 autocmd BufWritePost *.py call Flake8()
-
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-" Recommended key-mappings.
-" " <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-  "return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
-  " For no inserting <CR> key.
-  return pumvisible() ? "\<C-y> " : "\<CR>"
-endfunction
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-" Close popup by <Space>.
-inoremap <expr><Space> pumvisible() ? "\<C-y> " : "\<Space>"
-
-nmap <C-n> :NERDTreeToggle<CR>
-
-" Add an easier mapping for omnifunc
-inoremap <silent> ,, <C-x><C-o>
-
-""""""""""""""""""""""""""""""""""""""""""""""
-"              vim-go settings
-""""""""""""""""""""""""""""""""""""""""""""""
-
-au Filetype go nnoremap   <silent>   <leader>ga   :GoAlternate<CR>
-au Filetype go nnoremap   <silent>   <leader>gb   :GoBuild<CR>
-au Filetype go nnoremap   <silent>   <leader>gc   :GoCoverageToggle<CR>
-au Filetype go nnoremap   <silent>   <leader>gd   :GoDoc<CR>
-au Filetype go nnoremap   <silent>   <leader>ge   :GoDecls<CR>
-au Filetype go nnoremap   <silent>   <leader>ged  :GoDeclsDir<CR>
-au Filetype go nnoremap   <silent>   <leader>gg   :GoGenerate<CR>
-au Filetype go nnoremap   <silent>   <leader>gi   :GoImplements<CR>
-au Filetype go nnoremap   <silent>   <leader>gt   :GoTest<CR>
-nnoremap   <silent>   <leader>t   :TagbarToggle<CR>
-
-let g:go_auto_type_info = 1
-let g:go_metalinter_autosave = 1
