@@ -6,7 +6,6 @@ $BREW cask install \
     cryptomator \
     cyberduck \
     docker \
-    hyper \
     protonvpn \
     rambox \
     viscosity \
