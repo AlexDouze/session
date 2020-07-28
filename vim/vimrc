@@ -17,6 +17,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'ntpeters/vim-better-whitespace' " Trailing whitespaces visual and deletion
 Plugin 'andrewstuart/vim-kubernetes'    " Kubernetes snippet
 Plugin 'Yggdroot/indentLine'            " vertical line for indent
+Plugin 'tpope/vim-commentary'           " commentary
 " ...
 
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
