@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+$BREW upgrade
+
 $BREW install \
   ack \
   ansible \
@@ -19,8 +21,6 @@ $BREW install \
   tmux \
   vim \
   yq
-
-$BREW upgrade
 
 # DevOps snippet
 if [[ ! -d "$HOME/.devops-snippets" ]]; then
