@@ -21,6 +21,7 @@ $BREW install \
   rclone \
   tmux \
   vim \
+  yarn \
   yq
 
 
