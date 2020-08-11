@@ -3,6 +3,7 @@
 $BREW cask install \
     1password \
     brave-browser \
+    homebrew/cask-versions/brave-browser-nightly \
     cryptomator \
     cyberduck \
     docker \

@@ -7,6 +7,8 @@ sudo dnf install dnf-plugins-core
 # Brave browser repo
 sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
 sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+sudo dnf config-manager --add-repo https://brave-browser-rpm-nightly.s3.brave.com/x86_64/
+sudo rpm --import https://brave-browser-rpm-nightly.s3.brave.com/brave-core-nightly.asc
 
 # VSCode repo
 sudo dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/vscode
@@ -16,6 +18,7 @@ sudo dnf install -y \
   arandr \
   blueman \
   brave-browser \
+  brave-browser-nightly \
   cmake \
   code \
   ctags \
