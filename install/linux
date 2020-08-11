@@ -38,6 +38,7 @@ sudo dnf install -y \
   NetworkManager-l2tp \
   podman \
   podman-docker \
+  protonvpn-cli \
   rofi \
   util-linux-user \
   xbacklight \
