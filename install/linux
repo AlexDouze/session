@@ -36,6 +36,7 @@ sudo dnf install -y \
   libtool \
   maim \
   NetworkManager-l2tp \
+  NetworkManager-l2tp-gnome \
   podman \
   podman-docker \
   protonvpn-cli \
