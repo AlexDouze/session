@@ -17,6 +17,7 @@ $BREW install \
   httpie \
   jq \
   make \
+  minikube \
   node \
   rclone \
   tmux \
