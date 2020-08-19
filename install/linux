@@ -10,6 +10,10 @@ sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 sudo dnf config-manager --add-repo https://brave-browser-rpm-nightly.s3.brave.com/x86_64/
 sudo rpm --import https://brave-browser-rpm-nightly.s3.brave.com/brave-core-nightly.asc
 
+# VirtualBox
+sudo dnf config-manager --add-repo http://download.virtualbox.org/virtualbox/rpm/fedora/32/x86_64
+sudo rpm --import https://www.virtualbox.org/download/oracle_vbox.asc
+
 # VSCode repo
 sudo dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/vscode
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
@@ -32,6 +36,7 @@ sudo dnf install -y \
   i3lock \
   i3status \
   ImageMagick \
+  kernel-devel \
   libffi-devel \
   libtool \
   maim \
@@ -42,6 +47,7 @@ sudo dnf install -y \
   protonvpn-cli \
   rofi \
   util-linux-user \
+  VirtualBox-6.1 \
   xbacklight \
   yp-tools \
   zsh
