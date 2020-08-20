@@ -20,6 +20,7 @@ $BREW install \
   minikube \
   node \
   rclone \
+  terraform \
   tmux \
   vim \
   yarn \
