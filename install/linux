@@ -45,6 +45,7 @@ sudo dnf install -y \
   podman \
   podman-docker \
   protonvpn-cli \
+  redshift-gtk \
   rofi \
   util-linux-user \
   VirtualBox-6.1 \
@@ -65,6 +66,10 @@ sudo systemctl restart sshd
 # Create symlinks for config files
 echo "Create symlink for tmux configuration"
 ln -sf $PWD/config/tmux-linux.conf $HOME/.tmux.conf
+
+# Create symlinks for redshift.conf
+echo "Create symlink for tmux configuration"
+ln -sf $PWD/config/redshift.conf $HOME/.config/redshift.conf
 
 echo "Create symlink for i3"
 mkdir -p $HOME/.config/i3
