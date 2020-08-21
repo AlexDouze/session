@@ -21,6 +21,7 @@ $BREW install \
   node \
   rclone \
   terraform \
+  tig \
   tmux \
   vim \
   yarn \
