@@ -46,6 +46,7 @@ alias wad='watch -n 1 -d'
 alias t='tig'
 #Docker
 alias dk='docker'
+alias docker='podman'
 
 #Syncthing
 alias sync-browser='syncthing -browser-only'

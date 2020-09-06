@@ -1,0 +1,73 @@
+#!/bin/bash
+set -e
+
+# Brave browser repo
+curl -s https://brave-browser-apt-nightly.s3.brave.com/brave-core-nightly.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-prerelease.gpg add -
+sudo add-apt-repository 'deb [arch=amd64] https://brave-browser-apt-nightly.s3.brave.com/ stable main'
+
+# VSCode repo
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+
+# Podman
+. /etc/os-release
+echo "deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_${VERSION_ID}/ /" | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
+curl -L https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_${VERSION_ID}/Release.key | sudo apt-key add -
+
+sudo apt update -y
+sudo apt upgrade -y
+
+sudo apt install -y \
+  arandr \
+  blueman \
+  brave-browser-nightly \
+  cmake \
+  code \
+  ctags \
+  dunst \
+  gnome-tweak-tool \
+  gparted \
+  hub \
+  i3 \
+  i3lock \
+  i3status \
+  imagemagick \
+  maim \
+  openssh-server \
+  podman \
+  redshift-gtk \
+  rofi \
+  zsh
+
+# For podman to be quiet
+sudo touch /etc/containers/nodocker
+
+# SSH Conf
+sudo cp $PWD/config/sshd_config /etc/ssh/sshd_config
+sudo chown root:root /etc/ssh/sshd_config
+sudo chmod 600 /etc/ssh/sshd_config
+sudo systemctl enable ssh
+sudo systemctl restart sshd
+
+# Create symlinks for config files
+echo "Create symlink for tmux configuration"
+ln -sf $PWD/config/tmux-linux.conf $HOME/.tmux.conf
+
+# Create symlinks for redshift.conf
+echo "Create symlink for tmux configuration"
+ln -sf $PWD/config/redshift.conf $HOME/.config/redshift.conf
+
+echo "Create symlink for i3"
+mkdir -p $HOME/.config/i3
+ln -sf $PWD/config/i3-config $HOME/.config/i3/config
+ln -sf $PWD/config/i3status.conf $HOME/.config/i3/i3status.conf
+
+echo "Create symlink for gitconfig"
+ln -sf $PWD/config/gitconfig-linux $HOME/.gitconfig
+
+
+echo "Create symlink for dunst"
+mkdir -p $HOME/.config/dunst
+sudo ln -sf $PWD/config/dunstrc $HOME/.config/dunst/dunstrc
+
+chsh -s /bin/zsh

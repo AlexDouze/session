@@ -13,7 +13,12 @@ elif [[ "$OS" == 'Linux' ]]; then
     echo Linux install
     export BREW_HOME=/home/linuxbrew/.linuxbrew/bin
     export BREW=$BREW_HOME/brew
-    ./install/linux
+    if uname -a | grep Ubuntu; then
+      ./install/ubuntu
+    fi
+    if uname -a | grep f32; then
+      ./install/fedora
+    fi
 fi
 
 ./install/common
