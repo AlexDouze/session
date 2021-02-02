@@ -1,0 +1,26 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
+export PATH=$HOME/.devops-snippets:$PATH
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Helm
+if [[ -x "$(command -v helm)" ]]; then
+  source <(helm completion zsh)
+fi
+
+source <(kops completion zsh)
+
+export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+# export SSH_AUTH_SOCK=/run/user/1000/gnupg/S.gpg-agent.ssh
+
+export ASDF_DIR=$(brew --prefix asdf)

@@ -57,7 +57,6 @@ mkdir -p $HOME/.asdf/plugins
 echo "Create symlink for zprezto configuration"
 ln -sf $PWD/config/zpreztorc $HOME/.zpreztorc
 ln -sf $PWD/config/zshenv $HOME/.zshenv
-ln -sf $PWD/config/zshrc $HOME/.zshrc
 
 echo "Create symlink for vim"
 ln -sf $PWD/vim/vimrc $HOME/.vimrc
