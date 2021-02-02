@@ -24,6 +24,7 @@ $BREW install \
   tig \
   tmux \
   vim \
+  watch \
   yarn \
   yq
 
