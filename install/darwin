@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$BREW cask install \
+$BREW install --cask\
     1password \
     brave-browser \
     homebrew/cask-versions/brave-browser-nightly \
