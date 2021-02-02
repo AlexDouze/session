@@ -3,10 +3,10 @@
 $BREW install --cask\
     1password \
     brave-browser \
-    homebrew/cask-versions/brave-browser-nightly \
     cryptomator \
     cyberduck \
     docker \
+    iterm2 \
     protonvpn \
     rambox \
     viscosity \
