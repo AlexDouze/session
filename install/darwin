@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$BREW install --cask\
+$BREW install --cask -f\
     1password \
     brave-browser \
     cryptomator \
@@ -8,12 +8,12 @@ $BREW install --cask\
     docker \
     iterm2 \
     protonvpn \
-    rambox \
     viscosity \
     visual-studio-code \
 
 echo "Create symlink for gitconfig"
 ln -sf $PWD/config/gitconfig-darwin $HOME/.gitconfig
 
-echo "Create symlink for zshrc"
+echo "Create symlink for zsh"
 ln -sf $PWD/config/zshrc-darwin $HOME/.zshrc
+ln -sf $PWD/config/zshenv-darwin $HOME/.zshenv

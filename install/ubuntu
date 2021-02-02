@@ -70,7 +70,8 @@ echo "Create symlink for dunst"
 mkdir -p $HOME/.config/dunst
 sudo ln -sf $PWD/config/dunstrc $HOME/.config/dunst/dunstrc
 
-echo "Create symlink for zshrc"
+echo "Create symlink for zsh"
 ln -sf $PWD/config/zshrc $HOME/.zshrc
+ln -sf $PWD/config/zshenv $HOME/.zshenv
 
 chsh -s /bin/zsh
