@@ -16,9 +16,6 @@ elif [[ "$OS" == 'Linux' ]]; then
     if uname -a | grep Ubuntu; then
       ./install/ubuntu
     fi
-    if uname -a | grep f32; then
-      ./install/fedora
-    fi
 fi
 
 ./install/common
