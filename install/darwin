@@ -9,6 +9,7 @@ $BREW install --cask -f\
     iterm2 \
     protonvpn \
     spotify \
+    synergy \
     viscosity \
     visual-studio-code \
 
