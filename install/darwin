@@ -8,6 +8,7 @@ $BREW install --cask -f\
     docker \
     iterm2 \
     protonvpn \
+    spotify \
     viscosity \
     visual-studio-code \
 
