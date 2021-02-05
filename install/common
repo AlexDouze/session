@@ -16,6 +16,7 @@ $BREW install \
   htop \
   httpie \
   jq \
+  krew \
   make \
   minikube \
   node \
