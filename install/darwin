@@ -9,6 +9,7 @@ $BREW install --cask -f\
     gimp \
     iterm2 \
     maccy \
+    pock \
     protonvpn \
     spotify \
     synergy \
