@@ -6,6 +6,7 @@ $BREW install --cask -f\
     cryptomator \
     cyberduck \
     docker \
+    gimp \
     iterm2 \
     protonvpn \
     spotify \
