@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$BREW install --cask -f\
+$BREW install --cask \
     1password \
     brave-browser \
     cryptomator \
