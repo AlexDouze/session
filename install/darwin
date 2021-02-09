@@ -3,6 +3,7 @@
 $BREW install --cask \
     1password \
     brave-browser \
+    codespace \
     cryptomator \
     cyberduck \
     daisydisk \
