@@ -5,6 +5,7 @@ $BREW install --cask -f\
     brave-browser \
     cryptomator \
     cyberduck \
+    daisydisk \
     docker \
     gimp \
     iterm2 \
