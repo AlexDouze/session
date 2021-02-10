@@ -12,6 +12,7 @@ $BREW install \
   fasd \
   fzf \
   gcc \
+  git-lfs \
   go \
   htop \
   httpie \
