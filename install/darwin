@@ -18,6 +18,10 @@ $BREW install --cask \
     viscosity \
     visual-studio-code \
 
+$BREW install \
+    speedtest-cli \
+    wget
+
 echo "Create symlink for gitconfig"
 ln -sf $PWD/config/gitconfig-darwin $HOME/.gitconfig
 
