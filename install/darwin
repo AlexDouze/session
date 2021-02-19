@@ -19,6 +19,7 @@ $BREW install --cask \
     visual-studio-code \
 
 $BREW install \
+    istioctl \
     speedtest-cli \
     wget
 
