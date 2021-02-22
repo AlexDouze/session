@@ -10,6 +10,7 @@ $BREW install --cask \
     docker \
     gimp \
     iterm2 \
+    keybase \
     maccy \
     pock \
     protonvpn \
