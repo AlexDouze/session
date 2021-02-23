@@ -2,6 +2,7 @@
 
 $BREW install --cask \
     1password \
+    adguard \
     brave-browser \
     codespace \
     cryptomator \
