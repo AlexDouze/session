@@ -18,6 +18,9 @@ export EDITOR=vim
 
 source $HOME/.secret-env
 
+# GPG
+export GPG_TTY=$(tty)
+
 # vim
 alias vi='vim'
 
