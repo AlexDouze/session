@@ -19,6 +19,7 @@ $BREW install --cask \
     synergy \
     viscosity \
     visual-studio-code \
+    zoom \
 
 $BREW install \
     gpg \
