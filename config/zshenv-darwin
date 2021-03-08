@@ -13,6 +13,7 @@ fi
 export PATH=$PATH:$HOME/.local/bin:$HOME/.local/bin/go/bin:$GOPATH/bin:$HOME/.session/scripts:$HOME/.devops-snippets
 export PATH=$PATH:$HOME/.session/scripts/
 export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:/Users/alexandreledit/Library/Python/3.9/bin/
 
 export EDITOR=vim
 
