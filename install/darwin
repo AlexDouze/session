@@ -13,6 +13,7 @@ $BREW install --cask \
     iterm2 \
     keybase \
     maccy \
+    ngrok \
     pock \
     protonvpn \
     spotify \
