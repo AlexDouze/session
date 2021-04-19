@@ -12,6 +12,7 @@ $BREW install --cask \
     gimp \
     iterm2 \
     keybase \
+    kube-forwarder \
     maccy \
     ngrok \
     pock \
