@@ -9,6 +9,7 @@ $BREW install --cask \
     cyberduck \
     daisydisk \
     docker \
+    firefox \
     gimp \
     iterm2 \
     keybase \
