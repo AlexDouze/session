@@ -12,6 +12,7 @@ $BREW install --cask \
     firefox \
     gimp \
     iterm2 \
+    karabiner-elements \
     keybase \
     kube-forwarder \
     maccy \
@@ -37,3 +38,7 @@ ln -sf $PWD/config/gitconfig-darwin $HOME/.gitconfig
 echo "Create symlink for zsh"
 ln -sf $PWD/config/zshrc-darwin $HOME/.zshrc
 ln -sf $PWD/config/zshenv-darwin $HOME/.zshenv
+
+echo "Create symlink for karabiner"
+mkdir -p $HOME/.config/karabiner
+ln -sf $PWD/config/karabiner.json $HOME/.config/karabiner/karabiner.json
