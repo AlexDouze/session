@@ -15,7 +15,6 @@ $BREW install --cask \
     keybase \
     kube-forwarder \
     maccy \
-    ngrok \
     pock \
     protonvpn \
     spotify \
