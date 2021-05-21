@@ -23,6 +23,8 @@ $BREW install --cask \
     visual-studio-code \
     zoom \
 
+$BREW upgrade --cask --greedy
+
 $BREW install \
     gpg \
     istioctl \
