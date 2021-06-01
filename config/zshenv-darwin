@@ -61,6 +61,8 @@ export VAULT_ADDR=https://vault.easymile.com
 
 # Kubernetes
 export KOPS_STATE_STORE=s3://easymile-dev-clusters
+alias kb='kubectl'
+
 
 alias randpass='openssl rand -base64 32 | tr -d /=+ | cut -c -32'
 alias fini='notify-send "finished" "The task is finished"'
