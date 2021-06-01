@@ -5,7 +5,7 @@ $BREW upgrade
 
 $BREW install \
   ack \
-  ansible \
+  ansible@2.9 \
   asdf \
   awscli \
   bat \
