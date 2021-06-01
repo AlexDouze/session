@@ -42,3 +42,6 @@ ln -sf $PWD/config/zshenv-darwin $HOME/.zshenv
 echo "Create symlink for karabiner"
 mkdir -p $HOME/.config/karabiner
 ln -sf $PWD/config/karabiner.json $HOME/.config/karabiner/karabiner.json
+
+echo "Create symlink for gpg"
+ln -sf /usr/local/bin/gpg /usr/local/bin/gpg2
