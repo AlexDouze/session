@@ -5,7 +5,6 @@ $BREW upgrade
 
 $BREW install \
   ack \
-  ansible@2.9 \
   asdf \
   awscli \
   bat \
@@ -26,10 +25,16 @@ $BREW install \
   tig \
   tmux \
   vim \
+  virtualenv \
+  virtualenvwrapper \
   watch \
   yarn \
   yq
 
+
+# Create virtualenvs
+mkdir -p $HOME/.virtualenvs
+mkdir -p $HOME/.pip/cache
 
 # DevOps snippet
 if [[ ! -d "$HOME/.devops-snippets" ]]; then

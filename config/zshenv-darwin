@@ -18,6 +18,16 @@ export PATH=$PATH:$HOME/go/bin
 
 export EDITOR=vim
 
+export PATH=$PATH:/usr/local/bin
+#Python
+export WORKON_HOME=$HOME/.virtualenvs
+export PIP_REQUIRE_VIRTUALENV=true
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+export VIRTUALENVWRAPPER_PYTHON='/usr/local/bin/python3'
+export VIRTUALENVWRAPPER_VIRTUALENV='/usr/local/bin/virtualenv'
+source /usr/local/bin/virtualenvwrapper_lazy.sh
+
 source $HOME/.secret-env
 
 # GPG
@@ -27,7 +37,6 @@ export GPG_TTY=$(tty)
 alias vi='vim'
 
 #fasd
-export PATH=$PATH:/usr/local/bin
 eval "$(fasd --init auto)"
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select
