@@ -9,11 +9,12 @@
 if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
-# Add local pyhton path
-export PATH=$PATH:$HOME/.local/bin:$HOME/.local/bin/go/bin:$GOPATH/bin:$HOME/.session/scripts:$HOME/.devops-snippets
-export PATH=$PATH:$HOME/.session/scripts/
+# Add scripts to path
+export PATH=$PATH:$HOME/.session/scripts
+# Add devops-snippets
+export PATH=$PATH:$HOME/.devops-snippets
+# Add GO
 export PATH=$PATH:$HOME/go/bin
-export PATH=$PATH:/Users/alexandreledit/Library/Python/3.9/bin/
 
 export EDITOR=vim
 
