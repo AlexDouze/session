@@ -27,6 +27,7 @@ $BREW install --cask \
 $BREW upgrade --cask --greedy
 
 $BREW install \
+    gnu-sed \
     gpg \
     istioctl \
     speedtest-cli \
@@ -45,3 +46,6 @@ ln -sf $PWD/config/karabiner.json $HOME/.config/karabiner/karabiner.json
 
 echo "Create symlink for gpg"
 ln -sf /usr/local/bin/gpg /usr/local/bin/gpg2
+
+echo "Create symlink for sed"
+ln -sf /usr/local/bin/gsed /usr/local/bin/sed
