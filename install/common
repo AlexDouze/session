@@ -21,7 +21,7 @@ $BREW install \
   minikube \
   node \
   rclone \
-  terraform \
+  tfenv \
   tig \
   tmux \
   vim \
